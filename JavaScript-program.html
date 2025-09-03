@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Checker</title>
+</head>
+<body>
+    <h1>Schedule for Day-to-Day Activities</h1>
+    <input type="text" id="dayInput" placeholder="Enter a day of the week">
+    <button onclick="checkActivity()">Activity</button>
+    <div id="result"></div>
+
+    <script>
+        function checkActivity() {
+            let day = document.getElementById("dayInput").value.toLowerCase();
+            let activity = "";
+
+            switch(day) {
+                case "monday":
+                    activity = "Web Development";
+                    break;
+                case "tuesday":
+                    activity = "Cyber Security";
+                    break;
+                case "wednesday":
+                    activity = "Web Development";
+                    break;
+                case "thursday":
+                    activity = "Focus on other projects";
+                    break;
+                case "friday":
+                    activity = "Cyber Security";
+                    break;
+                case "saturday":
+                    activity = "Focus on any activity done during the weekdays";
+                    break;
+                case "sunday":
+                    activity = "REST";
+                    break;
+                default:
+                    activity = "Invalid input. Please enter a valid weekday.";
+            }
+
+            document.getElementById("result").innerText = activity;
+        }
+    </script>
+</body>
+</html>
